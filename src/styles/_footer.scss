@@ -1,5 +1,8 @@
 @use 'variables';
 
+spam{
+    color: rgb(218, 212, 212);
+}
 footer{
     background-color: variables.$corBox;
     padding: 80px;
@@ -7,18 +10,25 @@ footer{
     margin-top: 100px;
 
     @media (max-width: 768px){
-        padding: 40px;
+        padding: 50px 10px;
     }
     .container{
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: space-between;
+
+    .container__logo{
+        transform: translateY(-20px);
+    }
+        
+        margin-bottom: 50px;
         img{
-            width: 85px;
+            width: 70px;
             transform: translateY(20px);
 
             @media (max-width: 768px){
-                width: 64px;
+                width: 40px;
             }
         }
         h3{
