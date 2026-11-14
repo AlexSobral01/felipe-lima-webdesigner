@@ -5,7 +5,7 @@ const cleanCSS = require('gulp-clean-css')
 const imageMin = require('gulp-imagemin')
 
 gulp.task('styles', function(){
-    return gulp.src('src/styles/**/**/*.scss')
+    return gulp.src('src/styles/**/*.scss')
     .pipe(sass({
         outputStyle: 'compressed'
     }).on('error', sass.logError))
@@ -21,5 +21,9 @@ gulp.task('imageMin', function(){
     .pipe(imageMin())
     .pipe(gulp.dest('build/images'))
 })
+
+gulp.task('watch', gulp.series('styles', function(){
+    return gulp.watch('src/styles/**/*.scss', gulp.series('styles'))
+}))
 
 gulp.task('default', gulp.series('styles', 'imageMin'))
