@@ -32,16 +32,16 @@
                 font-size: 65px;
             }
             p{
-                font-size: 30px;
+                font-size: 20px;
             }
 
             @media (max-width: 768px){
                 h2{
-                    font-size: 50px;
+                    font-size: 40px;
                 }
 
                 p{
-                    font-size: 20px;
+                    font-size: 10px;
                 }
             }
         }
@@ -52,16 +52,15 @@
         margin: 0 auto;
         padding-top: 50px;
         display: flex;
-        align-items: flex-start;
         justify-content: space-between;
+        padding: 0 40px;
 
         @media (max-width: 768px){
             display: block;
-            margin: 20px;
         }
 
         &__leftSide{
-             max-width: 320px;
+            max-width: 320px;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -71,7 +70,7 @@
         }
         &__rightSide{
             img{
-                width: 700px;
+                width: 500px;
                 height: auto;
                 box-shadow: 3px 7px 18px variables.$corLink;
                 
@@ -89,6 +88,7 @@
         width: 100%;
         margin: 0 auto;
         padding-top: 20px;
+        padding: 0 40px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
